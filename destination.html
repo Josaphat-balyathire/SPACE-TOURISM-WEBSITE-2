@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>The Design System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+
+  <body class="destination-page bg-clr-dark text-clr-white ff-second">
+    <!-- the header of the page -->
+     <a href="#main" class="skip-content"> skip to the content</a>
+    <header id="primary-header" class="primary-header flex text-clr-white ">
+      <div class="logo-container">
+        <img src="./assets/shared/logo.svg" alt="the logo of the page" class="logo" />
+      </div>
+
+      <div class="nav-menu">
+        <button
+          id="nav-toggle"
+          aria-controls="primary-header"
+          class="mobile-nav-toggle"
+        >
+          <span aria-expanded="false" class="sr-only">menu</span>
+        </button>
+
+        <nav class="navbar">
+          <ul class="nav-list flex" data-josaphat="false">
+            <li class=" nav-item uppercase ff-general fs-300">
+              <a href="index.html" class="nav-link flex"
+                ><span aria-hidden="true">00</span> Home</a
+              >
+            </li>
+            <li class="active nav-item uppercase ff-general fs-300">
+              <a href="destination.html" class="nav-link flex"
+                ><span aria-hidden="true">01</span> Destination</a
+              >
+            </li>
+            <li class="nav-item uppercase ff-general fs-300">
+              <a href="crew.html" class="nav-link flex"
+                ><span aria-hidden="true">02</span> Crew</a
+              >
+            </li>
+            <li class="nav-item uppercase ff-general fs-300">
+              <a href="technology.html" class="nav-link flex"
+                ><span aria-hidden="true">03</span> Technology</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main id="main" class="grid-container-destination grid-container ">
+    <h1 class="heading uppercase"><span>01</span> Pick your destination</h1>
+    <div class="sub-container">
+     <!-- tabs -->
+      <div class="underline-indicators tabs flex">
+          <button aria-selected="true" role="tab" aria-controls="moon-content moon" class=" text-clr-white uppercase ff-second fs-200 " >moon</button>
+          <button aria-selected="false" role="tab" aria-controls="mars-content mars" class=" text-clr-white uppercase ff-second fs-200 " >mars</button>
+          <button aria-selected="false" role="tab" aria-controls="europa-content europa" class=" text-clr-white uppercase ff-second fs-200 " >europa</button>
+          <button aria-selected="false" role="tab" aria-controls="titan-content titan" class=" text-clr-white uppercase ff-second fs-200 " >titan</button>
+      </div>
+
+      <!-- the moon content  -->
+      <article id="moon-content" class="flow-small content" tabindex="0">
+        <h2 class="center fs-900 ff-general">Moon</h2>
+        <section class="details">
+          <p class="center">
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+            regain perspective and come back refreshed. While you’re there, take in some history
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+          <div class="distance-info  flow flex">
+            <div  class="flex">
+              <h3 class=" uppercase text-clr-light">Avg. distance</h3>
+              <p class="fs-500 uppercase">384,400 km</p>
+            </div>
+            <div class="flex">
+              <h3 class=" uppercase text-clr-light  ">Est. travel time</h3>
+              <p class="fs-500 uppercase">3 days</p>
+            </div>
+          </div>
+        </section>
+      </article>
+       
+      <!-- the mars content  -->
+      <article id="mars-content" hidden class="flow-small content" tabindex="0">
+        <h2 class="center fs-900 ff-general">Mars</h2>
+        <section class="details">
+          <p class="center">
+             Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+              the tallest planetary mountain in our solar system. It’s two and a half times 
+              the size of Everest!
+          </p>
+          <div class="distance-info  flow flex">
+            <div  class="flex">
+              <h3 class=" uppercase text-clr-light">Avg. distance</h3>
+              <p class="fs-500 uppercase">  225 mil. km</p>
+            </div>
+            <div class="flex">
+              <h3 class=" uppercase text-clr-light  ">Est. travel time</h3>
+              <p class="fs-500 uppercase"> 9 months</p>
+            </div>
+          </div>
+        </section>
+
+      </article>  
+
+        <!-- the europa section  -->
+      <article id="europa-content" hidden class="flow-small content" tabindex="0">
+        <h2 class="center fs-900 ff-general">Europa</h2>
+        <section class="details">
+         <p class="center">
+           The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+             winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+             ice skating, curling, hockey, or simple relaxation in your snug 
+             wintery cabin.
+         </p>
+          <div class="distance-info  flow flex">
+            <div  class="flex">
+              <h3 class=" uppercase text-clr-light">Avg. distance</h3>
+              <p class="fs-500 uppercase">628 mil. km</p>
+            </div>
+            <div class="flex">
+              <h3 class=" uppercase text-clr-light  ">Est. travel time</h3>
+              <p class="fs-500 uppercase"> 3 years</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- the titan content   -->
+      <article id="titan-content" hidden class="flow-small content" tabindex="0">
+        <h2 class="center fs-900 ff-general">Titan</h2>
+        <section class="details">
+          <p class="center">
+            The only moon known to have a dense atmosphere other than Earth, Titan 
+              is a home away from home (just a few hundred degrees colder!). As a 
+              bonus, you get striking views of the Rings of Saturn.
+          </p>
+
+          <div class="distance-info  flow flex">
+            <div  class="flex">
+              <h3 class=" uppercase text-clr-light">Avg. distance</h3>
+              <p class="fs-500 uppercase"> 1.6 bil. km</p>
+            </div>
+            <div class="flex">
+              <h3 class=" uppercase text-clr-light  ">Est. travel time</h3>
+              <p class="fs-500 uppercase"> 7 years</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <picture id="moon" class="picture">
+      <source  srcset="./assets/destination/image-moon.webp">
+      <img src="./assets/destination/image-moon.png" alt="the Moon" class="image">
+    </picture>
+
+    <picture id="mars" class="picture" hidden>
+      <source srcset="./assets/destination/image-mars.webp">
+      <img src="./assets/destination/image-mars.png" alt="the Mars planet" class="image">
+    </picture>
+
+    <picture id="europa" class="picture" hidden>
+      <source id="europa" srcset="./assets/destination/image-europa.webp">
+      <img src="./assets/destination/image-europa.png" alt="the Europa image" class="image">
+    </picture>
+
+    <picture class="picture" id="titan" hidden>
+      <source srcset="./assets/destination/image-titan.webp">
+      <img src="./assets/destination/image-titan.png" alt="the Titan image" class="image">
+    </picture>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
