@@ -318,6 +318,45 @@ typography
     justify-content: space-between;
    
   }
+/* ------------------------------------------------------------------------------ */
+  .navbar {
+     &:has( a:hover, a:focus-visible) > ul::after {
+      opacity: 1;
+     }
+    > ul {
+     
+      anchor-name: --hovered-item;
+      
+      &::after {
+        transition: all 600ms;
+        content: "";
+        position: absolute;
+        inset: 0;
+        
+
+        position-anchor: --hovered-item;
+        top: anchor(top);
+        right: anchor(right);
+        left: anchor(left);
+        bottom: anchor(bottom);
+        border: 4px solid transparent;
+        border-radius: 2rem;
+        background: radial-gradient(circle at 50% 170%,  white, transparent 40%)padding-box,
+        url(./assets/destination/background-destination-desktop.jpg)padding-box,
+        linear-gradient(to bottom left, hsl(var(--color-light)) , transparent 50%)
+        ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+      }
+
+    }
+
+    &:hover::after {
+      opacity: 1;      
+    }
+  }
 
   
   
@@ -326,24 +365,47 @@ typography
     align-items: center;
     background-color: hsl(var(--color-dark) / .7 );
     padding-inline: clamp(2rem, 4vw - .2rem, 3rem);
+    corner-shape: scoop;
+    border-radius: .5rem;
+    z-index: 2;
+
+    @media (min-width: 35em) {
+      gap: 0;
+    }
+
   }
   .nav-list a {
-    --gap: .3rem;
+    position: relative;
+    z-index: 2;
+    
+    @media (min-width: 35em) {
+
+      padding-block: 2rem;
+    }
+    
+    
   }
-
   
-
+  
+  
   @supports (backdrop-filter: blur(1.2rem)){
     .nav-list {
       background-color: hsl(var(--color-white) / 0.05);
       backdrop-filter: blur(1.2rem);
     }
   }
-
+  
   
   .nav-item {
     padding: min(.4rem, 1.3rem);
-    padding-block: 2rem;
+    
+
+   @media (min-width: 35em) {
+     &:hover,
+    &:focus-visible {
+      anchor-name: --hovered-item;
+    }
+   }
 
   }
    
@@ -386,14 +448,12 @@ typography
     z-index: 1009;
    
   }
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(./assets/shared/icon-close.svg);
-  }
+  
   }
 
-  .nav-item:hover {
+  /* .nav-item:hover {
     border-bottom: .2rem solid hsl(var(--color-white) /.5);
-  }
+  } */
   @media (min-width: 35em) and (max-width: 44.999em) {
        li.active {
       border-bottom: .3rem solid hsl(var(--color-white));
