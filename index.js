@@ -37,7 +37,6 @@ toggleBtn.addEventListener("click", ()=> {
        let container = document.querySelectorAll(".content");
        let pictures = document.querySelectorAll(".picture");
 
-       console.log("hello world")
        for (let j = 0; j < container.length && j < pictures.length; j++) {
         container[j].setAttribute("hidden", "")
         pictures[j].setAttribute("hidden", "");
